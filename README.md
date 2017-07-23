@@ -60,7 +60,7 @@ File Formats
 ---------------------
 
 
-#### .pem
+### .pem
 
 Is plain-text format that could contain the ``certificate`` and/or the ``private key`` and/or ``public key``
 
@@ -98,7 +98,7 @@ MIIEpAIBAAKCAQEAlJtuOybb2pxAGaANG7+9PJo19CMtmvtiHV9iooYkkxVy0dtufQkGbfO+wpmL
 ```
 
 
-#### .pkcs12 .pfx .p12
+### .pkcs12 .pfx .p12
 Is password protected file that contains the ``certificate`` and the ``private key``
 
 ![](img/p12.png)
@@ -106,7 +106,7 @@ Is password protected file that contains the ``certificate`` and the ``private k
 To use .p12 files you will need to know the password
 
 
-##### .keystore .jks
+### .keystore .jks
 Is a Java specifit format, It is password protected and it contains .p12 data, the ``certificate`` and the ``private key``
 
 ![](img/jks.png)

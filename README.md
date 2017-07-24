@@ -1,12 +1,7 @@
 Encryption
 =================
 
-This post talks about **TLS** and the problems it solves
-
-The main problems that TLS solves are
-
-* End-to-End encryption
-* Trust Connection
+This post talks about the basic requirements to implement ``Transport Layer Security`` (**TLS**) and problems it solves
 
 End-to-End encryption
 --------------------
@@ -41,9 +36,9 @@ This issue is solved by using **Public-key certificate** also known as **Digital
 
 #### What is the **Certificate**?
 
-The Certificate is basically the Public key with attached information, including the issuer. 
+The Certificate is basically a digital form of identification, where the public key is typically published with attached information, including the issuer. 
 
-Certificates are created by a ```Certificate Authority``` (**CA**) 
+Certificates are created by a ```Certificate Authority``` (**CA**), a mutually trusted third party that confirms the identity of the certificate requestor. For instance, **VeriSign** and **GoDaddy** are two of the most populars
 
 ![](img/certificate.png)
 
@@ -62,11 +57,13 @@ File Formats
 
 ### .pem
 
-Is plain-text format that could contain the ``certificate`` and/or the ``private key`` and/or ``public key``
+Is a plain-text format that could contain the ``certificate`` and/or the ``private key`` and/or ``public key``
 
 ![](img/pem.png)
 
-You can open .pem file as text and check
+You can open .pem files in any text editor and check
+
+####Examples:
 
 for **Private key**:
 
@@ -99,7 +96,7 @@ MIIEpAIBAAKCAQEAlJtuOybb2pxAGaANG7+9PJo19CMtmvtiHV9iooYkkxVy0dtufQkGbfO+wpmL
 
 
 ### .pkcs12 .pfx .p12
-Is password protected file that contains the ``certificate`` and the ``private key``
+Is a password protected file that contains the ``certificate`` and the ``private key``
 
 ![](img/p12.png)
 
@@ -107,7 +104,7 @@ To use .p12 files you will need to know the password
 
 
 ### .keystore .jks
-Is a Java specifit format, It is password protected and it contains .p12 data, the ``certificate`` and the ``private key``
+Is a Java specific format, It is password protected and it contains .p12 data, the ``certificate`` and the ``private key``
 
 ![](img/jks.png)
 

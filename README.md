@@ -63,7 +63,7 @@ Is a plain-text format that could contain the ``certificate`` and/or the ``priva
 
 You can open .pem files in any text editor and check
 
-####Examples:
+#### Examples:
 
 for **Private key**:
 
@@ -91,7 +91,7 @@ for **Certificate**:
 MIIEpAIBAAKCAQEAlJtuOybb2pxAGaANG7+9PJo19CMtmvtiHV9iooYkkxVy0dtufQkGbfO+wpmL
 ...
 8PSYC1yUKL4HvrwNUyFIGp1SDgv9NecnXVXSns/lWWms2pEvJXtLdKAHdxgkNhDUBn/9XrgXAb0c
------BEGIN RSA PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
 ```
 
 

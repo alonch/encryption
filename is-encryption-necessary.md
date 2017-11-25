@@ -15,40 +15,58 @@ Encryption
 
 Most IT infrastructure like emails, browsers and instant message, use Transport Layer Security (`TLS`). TLS adds another level of security, where messages can **only** be understood by the destinatary. Let's see how it works.
 
-TLS consists in a set of passwords. The first password is provided to the message source so that they can encrypt the message to be sent, and a second password used by the destination to decipher the received message. For instance:
-
-Let's assume that **Alice** wants to send the message to **Bob**   
-**Alice** uses **Bob**'s provided password to encrypt a message  
+TLS consists in a set of passwords.  
+The public password is provided to the source so that they can encrypt the message to be sent 
 
 ![](img/encrypt.png) 
 
-When **Bob** receives the message   
-**Bob** decrypts the message using the second password that only he knows
+The private password is used by the destination to decipher the received message
 
 ![](img/decrypt.png) 
+
+For instance:  
+
+```
+Let's assume that Dave wants to buy something online  
+He gives his home address to the online store  
+The Store sends the product to his home  
+```
+
+We could assume that anybody with Dave's home address can send him packages, however, only people living in that address should be able to receive the packages
 
 
 Trust Connection
 --------------
 
-There's another problem, so far everything works perfectly once the connection has been established. However, we still need to face the handshake phase.  
+There's another problem, so far everything works fine once the connection has been established, in other words, the delivery guy knows exactly where the house is located.
 
-Computers are just IP addresses, e.g. `172.217.9.78`, which use routing services to move packages across the network. But, how can you be sure that you are connecting to the right party on the other side of the network? 
+Computers are located by IP addresses, e.g. `172.217.9.78`, which use routing services to move packages across the network. 
 
 ![](img/middleman.png)
+
+For example:  
+
+```
+You go to a new city, rent a car and setup the GPS to your hotel  
+Half way there, the GPS promps you to turn left but there is no interception
+You realized that the GPS is outdate  
+You wonder around until you see a gas station  
+You ask for directions to your hotel  
+```
+
+We could assume people on the gas station is trustworthy, but there could be people that will give you direcctions to a fake hotel
+
 
 Digital certificates are used to overcome this limitation. 
 
 Certificates are created by a Certificate Authority, a mutually trusted third party that confirms the identity of the application. **VeriSign** and **GoDaddy** are two of the most popular Certificate Authorities. With these certificates any third party can confirm the destination's identity as follows:
 
-**Bob** asks **Charlie** for a new certificate
-
-![](img/req-cert.png)
-
-When **Alice** wants to connect to **Bob**  
-**Alice** asks **Bob** for his certificate   
-**Bob** returns the certificated created by **Charlie**  
-**Alice** confirms with **Charlie** that the certificate is authentic  
+```
+The hotel contacts the travel agency and ask for a pin number  
+When customers arrive to the hotel 
+They will ask the hotel for the pin number  
+Customers will call the travel agency and confirm that the pin number is still valid  
+```
 
 ![](img/cert-issuer.png)
 
@@ -57,4 +75,4 @@ Now, applications don't care to what they are connecting to, as long as the righ
 
 
 
-Original Icons made by [Madebyoliver](https://www.flaticon.com/authors/madebyoliver)
+Original Icons made by [Madebyoliver](https://www.flaticon.com/authors/madebyoliver) and [Eucalyp](https://www.flaticon.com/authors/eucalyp)
